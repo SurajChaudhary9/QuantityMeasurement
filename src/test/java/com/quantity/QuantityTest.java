@@ -52,6 +52,7 @@ public class QuantityTest {
 		Assert.assertNotSame(feet, feet1);
 	}
 
+//TC 1.4 Value Check for equality
 	@Test
 	public void giveSameTypesOfObjects_shouldReturnEqual() {
 		Feet feet = new Feet();
