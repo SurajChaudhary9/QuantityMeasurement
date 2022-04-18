@@ -6,14 +6,14 @@
 package com.quantity;
 
 public class Feet {
-	private double value;
-
-	/**
-	 * @param d
-	 */
+	private double value = 0.0;
 
 	public Feet(double value) {
 		this.value = value;
+	}
+
+	public Feet() {
+
 	}
 
 	@Override
