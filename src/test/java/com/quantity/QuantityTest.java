@@ -99,5 +99,15 @@ public class QuantityTest {
 		Inch inch1 = new Inch(0.0);
 		Inch inch2 = null;
 		Assert.assertNotSame(inch1, inch2);
+
+	}
+
+	// TC 1.9 - Reference Check
+
+	@Test
+	public void givenInchAndInchFromSameRef_WhenEqual_ShouldReturnTrue() {
+		Inch inch1 = new Inch(0);
+		boolean result = inch1 == inch1;
+		Assert.assertTrue(result);
 	}
 }
