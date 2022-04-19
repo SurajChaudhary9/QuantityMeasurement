@@ -135,4 +135,12 @@ public class QuantityTest {
 		Inch inch2 = new Inch(0.0);
 		Assert.assertEquals(inch1, inch2);
 	}
+
+	// TC 1.12 - Value check for different values
+	@Test
+	public void given0Inchand1Inch_DiffValue_ShouldReturnNotEqual() {
+		Inch inch1 = new Inch(0.0);
+		Inch inch2 = new Inch(1.0);
+		Assert.assertNotEquals(inch1, inch2);
+	}
 }
