@@ -84,4 +84,12 @@ public class QuantityTest {
 		feet1.setValue(4);
 		Assert.assertNotEquals(feet.getValue(), feet1.getValue(), 0.0);
 	}
+
+//TC 1.7 - Different Inch value test.
+	@Test
+	public void given0Inchand1Inch_ShouldReturnNotEqual() {
+		Inch inch1 = new Inch(0.0);
+		Inch inch2 = new Inch(1.0);
+		Assert.assertNotSame(inch1, inch2);
+	}
 }
