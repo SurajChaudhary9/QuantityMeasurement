@@ -28,4 +28,26 @@ public class Feet {
 		return Double.doubleToLongBits(value) == Double.doubleToLongBits(other.value);
 	}
 
+	/**
+	 * @purpose :
+	 * @param :
+	 * @function :
+	 * @return :
+	 */
+	public void setValue(int i) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * @purpose :
+	 * @param :
+	 * @function :
+	 * @return :
+	 */
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
