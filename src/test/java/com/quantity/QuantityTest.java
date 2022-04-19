@@ -110,4 +110,13 @@ public class QuantityTest {
 		boolean result = inch1 == inch1;
 		Assert.assertTrue(result);
 	}
+
+	// TC 1.9 - Reference Check with different values.
+	@Test
+	public void givenInchAndInchWithDiffSameRef_WhenNotEqual_ShouldReturnFalse() {
+		Inch inch1 = new Inch(0);
+		Inch inch2 = new Inch(1);
+		boolean result = inch1 == inch2;
+		Assert.assertFalse(result);
+	}
 }
