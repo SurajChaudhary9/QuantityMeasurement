@@ -6,7 +6,7 @@
 package com.quantity;
 
 public enum Units {
-	FEET(12), INCH(1);
+	FEET(12), INCH(1), YARD(36);
 
 	public double unit;
 
@@ -15,3 +15,4 @@ public enum Units {
 		this.unit = unit;
 	}
 }
+//custom data type (enumerated data type)
