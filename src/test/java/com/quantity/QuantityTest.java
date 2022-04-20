@@ -205,4 +205,14 @@ public class QuantityTest {
 		double value1 = quantityMeasurement.unitComparison(Units.INCH, 36.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
+
+	/*
+	 * TC 1.15 for comparing lengths 5: 36 in = 1 yd
+	 */
+	@Test
+	public void given36InchAnd1YardWhenCompared_shouldReturnTrue() {
+		double value1 = quantityMeasurement.unitComparison(Units.INCH, 36.0);
+		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		Assert.assertEquals(value1, value2, 0.0);
+	}
 }
