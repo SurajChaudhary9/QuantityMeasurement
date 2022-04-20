@@ -215,4 +215,15 @@ public class QuantityTest {
 		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
+
+	/*
+	 * TC 1.16 for comparing lengths 6: 1 yd = 3 ft
+	 */
+	@Test
+	public void given1Yard3FeetWhenCompared_shouldReturnTrue() {
+		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value1 = quantityMeasurement.unitComparison(Units.FEET, 3.0);
+		Assert.assertEquals(value1, value2, 0.0);
+	}
+
 }
