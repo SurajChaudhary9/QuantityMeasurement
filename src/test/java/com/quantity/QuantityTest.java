@@ -187,7 +187,7 @@ public class QuantityTest {
 	}
 
 	/*
-	 * TC 1.13 for comparing lengths 3: 1 in != 1 yd
+	 * TC 1.13 for comparing lengths 3: 1 inch != 1 yard
 	 */
 	@Test
 	public void given1InchAnd1YardWhenCompared_shouldReturnFalse() {
@@ -197,7 +197,7 @@ public class QuantityTest {
 	}
 
 	/*
-	 * TC 1.14 for comparing lengths 4: 1 yd = 36 in
+	 * TC 1.14 for comparing lengths 4: 1 yard = 36 inch
 	 */
 	@Test
 	public void given1YardAnd36InchWhenCompared_shouldReturnTrue() {
