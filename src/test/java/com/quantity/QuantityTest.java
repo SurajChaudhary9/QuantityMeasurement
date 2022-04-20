@@ -175,4 +175,24 @@ public class QuantityTest {
 		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
+
+	/*
+	 * TC 1.13 for comparing lengths 2: 1 ft != 1 yd
+	 */
+	@Test
+	public void given1FeetAnd1YardWhenCompared_shouldReturnFalse() {
+		double value1 = quantityMeasurement.unitComparison(Units.FEET, 1.0);
+		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		Assert.assertNotEquals(value1, value2, 0.0);
+	}
+
+	/*
+	 * TC 1.13 for comparing lengths 3: 1 in != 1 yd
+	 */
+	@Test
+	public void given1InchAnd1YardWhenCompared_shouldReturnFalse() {
+		double value1 = quantityMeasurement.unitComparison(Units.INCH, 1.0);
+		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		Assert.assertNotEquals(value1, value2, 0.0);
+	}
 }
