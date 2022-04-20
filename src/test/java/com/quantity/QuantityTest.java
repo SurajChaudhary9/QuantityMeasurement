@@ -219,8 +219,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1Yard3FeetWhenCompared_shouldReturnTrue() {
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 3.0);
+		double value1 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value2 = quantityMeasurement.unitComparison(Units.FEET, 3.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -235,4 +235,13 @@ public class QuantityTest {
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
+//UC4
+	// ADD TWO LENGTH IN INCHES
+	@Test
+	public void givenTwoInchAndTwoInch_WhenAdded_ShouldReturnFourInch() {
+		double value1 = quantityMeasurement.unitComparison(Units.INCH, 2.0);
+		double value2 = quantityMeasurement.unitComparison(Units.INCH, 2.0);
+		Assert.assertEquals(4, value1 + value2, 0.0);
+
+	}
 }
