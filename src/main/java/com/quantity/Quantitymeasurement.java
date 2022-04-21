@@ -12,6 +12,11 @@ public class Quantitymeasurement {
 	// Units -data type units - object ENUM
 	public double unitComparison(Units units, double value) {
 		return value * units.unit;
+
+	}
+
+	public double unitConversion(VolumeUnits units, Double value) {
+		return units.unit * value;
 	}
 
 	@Override
