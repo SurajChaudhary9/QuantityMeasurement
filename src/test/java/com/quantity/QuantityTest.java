@@ -265,4 +265,14 @@ public class QuantityTest {
 		double value2 = quantityMeasurement.unitComparison(Units.INCH, 14);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
+
+	/*
+	 * TC 1.26 to add two lengths in inches 1 ft + 1 ft = 24 in
+	 */
+	@Test
+	public void given1FeetAnd1Feet_WhenAdded_ShouldReturnCorrect() {
+		double value1 = quantityMeasurement.unitAddition(Units.FEET, 1.0, Units.FEET, 1.0);
+		double value2 = quantityMeasurement.unitComparison(Units.INCH, 24);
+		Assert.assertEquals(value1, value2, 0.0);
+	}
 }
