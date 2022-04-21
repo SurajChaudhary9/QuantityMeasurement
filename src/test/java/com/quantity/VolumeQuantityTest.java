@@ -46,4 +46,14 @@ public class VolumeQuantityTest {
 		double value2 = quantityMeasurement.unitConversion(VolumeUnits.MILLILITER, 1000.0);
 		Assert.assertEquals(value1, value2, 0);
 	}
+
+	/**
+	 * TC 1.4 : For Getting 1 Gallon + 3.78 Litre = 7.56 Liter Check
+	 */
+	@Test
+	public void givenOneGallonAndThreePointSevenEightLitersWhenAdded_ShouldReturnSevenPointFiveSixLiters() {
+		double value1 = quantityMeasurement.unitAddition(VolumeUnits.GALLON, 1.0, VolumeUnits.LITRE, 3.78);
+		double value2 = quantityMeasurement.unitConversion(VolumeUnits.LITRE, 7.56);
+		Assert.assertEquals(value1, value2, 0);
+	}
 }
