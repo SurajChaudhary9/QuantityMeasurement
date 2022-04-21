@@ -18,12 +18,22 @@ public class VolumeQuantityTest {
 	}
 
 	/**
-	 * Rigorous Test :- For Getting 0 Gallon And 0 Gallon Equality Check
+	 * TC 1.1 :- For Getting 0 Gallon And 0 Gallon Equality Check
 	 */
 	@Test
 	public void given0Gallonand0GallonWhenEqual_ShouldReturnEqual() {
 		double value1 = quantityMeasurement.unitConversion(VolumeUnits.GALLON, 0.0);
 		double value2 = quantityMeasurement.unitConversion(VolumeUnits.GALLON, 0.0);
+		Assert.assertEquals(value1, value2, 0);
+	}
+
+	/**
+	 * TC 1.2 :- For Getting 1 Gallon And 3.78 Litres Equality Check
+	 */
+	@Test
+	public void given1GallonandThreepointSevenEightLitersWhenEqual_ShouldReturnEqual() {
+		double value1 = quantityMeasurement.unitConversion(VolumeUnits.GALLON, 1.0);
+		double value2 = quantityMeasurement.unitConversion(VolumeUnits.LITRE, 3.78);
 		Assert.assertEquals(value1, value2, 0);
 	}
 }
