@@ -27,4 +27,8 @@ public class Quantitymeasurement {
 				&& Double.doubleToLongBits(inch) == Double.doubleToLongBits(other.inch);
 	}
 
+	public double unitAddition(Units unit1, double value1, Units unit2, double value2) {
+		return unitComparison(unit1, value1) + unitComparison(unit2, value2);
+
+	}
 }
