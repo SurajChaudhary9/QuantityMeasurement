@@ -23,6 +23,14 @@ public class Quantitymeasurement {
 		return unitConversion(unit1, value1) + unitConversion(unit2, value2);
 	}
 
+	public double unitConversion(WeightUnits units, Double value) {
+		return units.unit * value;
+	}
+
+	public double unitAddition(WeightUnits unit1, double value1, WeightUnits unit2, double value2) {
+		return unitConversion(unit1, value1) + unitConversion(unit2, value2);
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
