@@ -244,4 +244,25 @@ public class QuantityTest {
 		Assert.assertEquals(4, value1 + value2, 0.0);
 
 	}
+
+	// UC4
+	/*
+	 * TC 1.24 to add two lengths in inches 2 in + 2 in = 4 in
+	 */
+	@Test
+	public void given2InchAnd2Inch_WhenAdded_ShouldReturnCorrect() {
+		double value1 = quantityMeasurement.unitAddition(Units.INCH, 2.0, Units.INCH, 2.0);
+		double value2 = quantityMeasurement.unitComparison(Units.INCH, 4);
+		Assert.assertEquals(value1, value2, 0.0);
+	}
+
+	/*
+	 * TC 1.25 to add two lengths in inches 1 ft + 2 in = 14 in
+	 */
+	@Test
+	public void given1FeetAnd2Inch_WhenAdded_ShouldReturnCorrect() {
+		double value1 = quantityMeasurement.unitAddition(Units.FEET, 1.0, Units.INCH, 2.0);
+		double value2 = quantityMeasurement.unitComparison(Units.INCH, 14);
+		Assert.assertEquals(value1, value2, 0.0);
+	}
 }
