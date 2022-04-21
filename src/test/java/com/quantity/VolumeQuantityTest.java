@@ -56,4 +56,14 @@ public class VolumeQuantityTest {
 		double value2 = quantityMeasurement.unitConversion(VolumeUnits.LITRE, 7.56);
 		Assert.assertEquals(value1, value2, 0);
 	}
+
+	/**
+	 * TC 1.5 : For Getting 1 Liter + 1000 Ml = 2 ltr check
+	 */
+	@Test
+	public void givenOneLitreAndThousandMillilitersWhenAdded_ShouldReturnTwoLiters() {
+		double value1 = quantityMeasurement.unitAddition(VolumeUnits.LITRE, 1.0, VolumeUnits.MILLILITER, 1000);
+		double value2 = quantityMeasurement.unitConversion(VolumeUnits.LITRE, 2.0);
+		Assert.assertEquals(value1, value2, 0);
+	}
 }
