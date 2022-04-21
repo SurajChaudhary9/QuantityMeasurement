@@ -36,4 +36,14 @@ public class VolumeQuantityTest {
 		double value2 = quantityMeasurement.unitConversion(VolumeUnits.LITRE, 3.78);
 		Assert.assertEquals(value1, value2, 0);
 	}
+
+	/**
+	 * TC 1.3 :- For Getting 1 Litre And 1000 Ml Equality Check
+	 */
+	@Test
+	public void given1litreand1000MilliLitersWhenEqual_ShouldReturnEqual() {
+		double value1 = quantityMeasurement.unitConversion(VolumeUnits.LITRE, 1.0);
+		double value2 = quantityMeasurement.unitConversion(VolumeUnits.MILLILITER, 1000.0);
+		Assert.assertEquals(value1, value2, 0);
+	}
 }
