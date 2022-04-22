@@ -8,3 +8,4 @@ package com.quantity;
 public interface Units {
 	public double unitConversion(Double value);
 }
+//Refctor using interface and DRY

@@ -1,12 +1,14 @@
 /**
- *@PROBLEM_STATEMENT : UC8
+ *@PROBLEM_STATEMENT : UC
  *@author Suraj Chaudhary
  *@Date 22-Apr-2022
  */
 package com.quantity;
 
-public class TemperatureUnits implements Units {
-	CELSIUS(false), FAHRENHEIT(true);
+import java.util.function.Function;
+
+public enum TemperatureUnits implements Units {
+	CELSIOUS(false), FAHRENHEIT(true);
 
 	final Function<Double, Double> degFToCelcius = (degF) -> {
 		return ((degF.doubleValue() - 32) * 5 / 9);
@@ -25,9 +27,7 @@ public class TemperatureUnits implements Units {
 		}
 	}
 
-	@Override
 	public double unitConversion(Double value) {
 		return conversion_value.apply(value);
 	}
-
 }

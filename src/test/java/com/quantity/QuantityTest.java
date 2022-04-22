@@ -20,21 +20,21 @@ public class QuantityTest {
 
 	@Test
 	public void given0Feetand0Feet_ShouldReturnEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 0.0);
-		double value2 = quantityMeasurement.unitComparison(Units.FEET, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 0.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.FEET, 0.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
 	@Test
 	public void given0Feetand1Feet_ShouldReturnNotEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 1.0);
-		double value2 = quantityMeasurement.unitComparison(Units.FEET, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 1.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.FEET, 0.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
 	@Test
 	public void givenNullFeetValue_shouldReturnFalse() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 0.0);
 		Assert.assertNotNull(value1);
 	}
 
@@ -64,17 +64,17 @@ public class QuantityTest {
 
 	@Test
 	public void givenSameValuesInDifferentObjects_shouldReturnEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 0.0);
 		Quantitymeasurement quantityMeasurement1 = new Quantitymeasurement();
-		double value2 = quantityMeasurement1.unitComparison(Units.FEET, 0.0);
+		double value2 = quantityMeasurement1.unitConversion(LengthUnits.FEET, 0.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
 	@Test
 	public void givenDifferentValuesInDifferentObjects_shouldReturnNotEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 0.0);
 		Quantitymeasurement quantityMeasurement1 = new Quantitymeasurement();
-		double value2 = quantityMeasurement1.unitComparison(Units.FEET, 1.0);
+		double value2 = quantityMeasurement1.unitConversion(LengthUnits.FEET, 1.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
@@ -83,8 +83,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given0Inchand0Inch_ShouldReturnEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 0.0);
-		double value2 = quantityMeasurement.unitComparison(Units.INCH, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 0.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 0.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -93,8 +93,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given0Inchand1Inch_ShouldReturnNotEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 0.0);
-		double value2 = quantityMeasurement.unitComparison(Units.INCH, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 0.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 1.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
@@ -134,15 +134,15 @@ public class QuantityTest {
 	 */
 	@Test
 	public void givenTwoSameValuesOfDifferentObjects_ShouldReturnEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 0.0);
-		double value2 = new Quantitymeasurement().unitComparison(Units.INCH, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 0.0);
+		double value2 = new Quantitymeasurement().unitConversion(LengthUnits.INCH, 0.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
 	@Test
 	public void givenTwoDifferentValuesOfDifferentObjects_ShouldReturnNotEqual() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 0.0);
-		double value2 = new Quantitymeasurement().unitComparison(Units.INCH, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 0.0);
+		double value2 = new Quantitymeasurement().unitConversion(LengthUnits.INCH, 1.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
@@ -152,15 +152,15 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given0YardAnd0YardWhenCompared_shouldReturnTrue() {
-		double value1 = quantityMeasurement.unitComparison(Units.YARD, 0.0);
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 0.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.YARD, 0.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 0.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
 	@Test
 	public void given0YardAnd1YardWhenCompared_shouldReturnFalse() {
-		double value1 = quantityMeasurement.unitComparison(Units.YARD, 0.0);
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.YARD, 0.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
@@ -169,8 +169,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given3FeetAnd1YardWhenCompared_shouldReturnTrue() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 3.0);
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 3.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -179,8 +179,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1FeetAnd1YardWhenCompared_shouldReturnFalse() {
-		double value1 = quantityMeasurement.unitComparison(Units.FEET, 1.0);
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.FEET, 1.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
@@ -189,8 +189,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1InchAnd1YardWhenCompared_shouldReturnFalse() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 1.0);
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 1.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
 		Assert.assertNotEquals(value1, value2, 0.0);
 	}
 
@@ -199,8 +199,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1YardAnd36InchWhenCompared_shouldReturnTrue() {
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 36.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 36.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -209,8 +209,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given36InchAnd1YardWhenCompared_shouldReturnTrue() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 36.0);
-		double value2 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 36.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -219,8 +219,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1Yard3FeetWhenCompared_shouldReturnTrue() {
-		double value1 = quantityMeasurement.unitComparison(Units.YARD, 1.0);
-		double value2 = quantityMeasurement.unitComparison(Units.FEET, 3.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.YARD, 1.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.FEET, 3.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -230,8 +230,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1CMAnd1CMWhenCompared_shouldReturnTrue() {
-		double value2 = quantityMeasurement.unitComparison(Units.CM, 5.0);
-		double value1 = quantityMeasurement.unitComparison(Units.CM, 5.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.CM, 5.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.CM, 5.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -239,8 +239,8 @@ public class QuantityTest {
 	// ADD TWO LENGTH IN INCHES
 	@Test
 	public void givenTwoInchAndTwoInch_WhenAdded_ShouldReturnFourInch() {
-		double value1 = quantityMeasurement.unitComparison(Units.INCH, 2.0);
-		double value2 = quantityMeasurement.unitComparison(Units.INCH, 2.0);
+		double value1 = quantityMeasurement.unitConversion(LengthUnits.INCH, 2.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 2.0);
 		Assert.assertEquals(4, value1 + value2, 0.0);
 
 	}
@@ -251,8 +251,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given2InchAnd2Inch_WhenAdded_ShouldReturnCorrect() {
-		double value1 = quantityMeasurement.unitAddition(Units.INCH, 2.0, Units.INCH, 2.0);
-		double value2 = quantityMeasurement.unitComparison(Units.INCH, 4);
+		double value1 = quantityMeasurement.unitAddition(LengthUnits.INCH, 2.0, LengthUnits.INCH, 2.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 4.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -261,8 +261,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1FeetAnd2Inch_WhenAdded_ShouldReturnCorrect() {
-		double value1 = quantityMeasurement.unitAddition(Units.FEET, 1.0, Units.INCH, 2.0);
-		double value2 = quantityMeasurement.unitComparison(Units.INCH, 14);
+		double value1 = quantityMeasurement.unitAddition(LengthUnits.FEET, 1.0, LengthUnits.INCH, 2.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 14.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -271,8 +271,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given1FeetAnd1Feet_WhenAdded_ShouldReturnCorrect() {
-		double value1 = quantityMeasurement.unitAddition(Units.FEET, 1.0, Units.FEET, 1.0);
-		double value2 = quantityMeasurement.unitComparison(Units.INCH, 24);
+		double value1 = quantityMeasurement.unitAddition(LengthUnits.FEET, 1.0, LengthUnits.FEET, 1.0);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 24.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 
@@ -281,8 +281,8 @@ public class QuantityTest {
 	 */
 	@Test
 	public void given2InchAnd2CM_WhenAdded_ShouldReturnCorrect() {
-		value1 = quantityMeasurement.unitAddition(Units.INCH, 2.0, Units.CM, 2.5);
-		value2 = quantityMeasurement.unitComparison(Units.INCH, 3);
+		double value1 = quantityMeasurement.unitAddition(LengthUnits.INCH, 2.0, LengthUnits.CM, 2.5);
+		double value2 = quantityMeasurement.unitConversion(LengthUnits.INCH, 3.0);
 		Assert.assertEquals(value1, value2, 0.0);
 	}
 }

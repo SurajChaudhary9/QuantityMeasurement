@@ -1,17 +1,21 @@
 /**
- *@PROBLEM_STATEMENT : UC6 Volume litre Gallon Compare
+ *@PROBLEM_STATEMENT : UC
  *@author Suraj Chaudhary
- *@Date 21-Apr-2022
+ *@Date 22-Apr-2022
  */
 package com.quantity;
 
-public enum VolumeUnits implements Units {
-	GALLON(3.78 * 1000), LITRE(1000), MILLILITER(1);
+public enum LengthUnits implements Units {
+	FEET(12), INCH(1), YARD(36), CM(1 / 2.5);
 
 	public double unit;
 
-	VolumeUnits(double units) {
+	/**
+	 * @param d
+	 */
+	LengthUnits(double units) {
 		this.unit = units;
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -19,4 +23,5 @@ public enum VolumeUnits implements Units {
 		// TODO Auto-generated method stub
 		return unit * value;
 	}
+
 }
